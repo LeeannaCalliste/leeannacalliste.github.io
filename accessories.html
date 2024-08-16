@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TECHNOFIX</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css">
+
+
+<style>
+body, html {height: 100%}
+body, h1,h2,h3,h4,h5,h6 {font-family: "Anton", sans-serif;}
+p.a {font-family: hanken grotesk, sans-serif;}
+ul.b {font-family: hanken grotesk, sans-serif;}
+ul.c {list-style-type: square;}
+.w3-row-padding img {margin-bottom: 12px} 
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("images/Header-background.jpg");
+  min-height: 90%; 
+}
+ .bgimg2 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("images/contact us.jpg");
+  min-height: 90%; 
+}
+
+</style>
+</style>
+</head>
+<body class="w3-black">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-white w3-opacity w3-hover-opacity-off w3-right"  id="myNavbar">
+    <nav>
+    <a href="index.html" class="w3-bar-item navbar-brand"><img src="images/TechnoFix.png" alt="logo" style="width:40px;"></a>
+    <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+    <a href="about us.html" class="w3-bar-item w3-button">ABOUT US</a>
+    <a href="repairs.html" class="w3-bar-item w3-button">REPAIRS</a>
+    <a href="accessories.html" class="w3-bar-item w3-button">ACCESSORIES</a>
+    <a href="contact us.html" class="w3-bar-item w3-button">CONTACT US</a>
+    
+    <a href="#myMap" class="w3-display-topright w3-bar-item w3-button">SEARCH</a>
+  </nav>
+  </div>
+</div>
+
+<!-- Accessories Container -->
+  <div class="w3-container w3-padding-64 w3-xlarge" style="background-color:#313b53;" id="accessories">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo w3-border-bottom" style="margin-bottom:64px">ACCESSORIES</h1>  
+<p class= "a  w3-center">Browse our catalogs for a wide variety of accessories for your devices.</p>
+          <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+              <div class="w3-third w3-margin-bottom">
+          <img src="images/ear pieces.jpg" al t="ear pieces" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Ear Pieces</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('id04').style.display='block'">See Catalog</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/chargers.jpg" alt="chargers" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Chargers</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('id05').style.display='block'">See Catalog</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/more.jpg" alt="more" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>More Items</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('id06').style.display='block'">See Catalog</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Accessories Modal -->
+<div id="id04" class="w3-modal">
+     <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-white w3-center w3-padding-32"> 
+        <span onclick="document.getElementById('id04').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+  <div class="w3-container w3-padding-32" id="accessories">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Ear Pieces</h3>
+    <p>All items can be ordered here by clicking on the WhatsApp link. Click the link to chat with us today!</p>
+
+    <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+    <img src="images/samsung ear buds.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Samsung Galaxy Ear Buds 2"> 
+      <h3>Sam Galaxy Ear Buds 2</h3>
+      <p class="w3-opacity">Item Code E001</p>
+      <p>Price: TTD1200</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/Ear Pods.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Ear Pods Pro"> 
+      <h3>Ear Pods Pro</h3>
+      <p class="w3-opacity">Item Code E002</p>
+      <p>Price: TTD1000</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+</p>
+    </div>
+
+<div class="w3-col l3 m6 w3-margin-bottom">
+    <img src="images/Headphones.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sony MDR Headphones"> 
+      <h3>Sony MDR Headphones</h3>
+      <p class="w3-opacity">Item Code E003</p>
+       <p>Price: TTD1000</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+</p>
+    </div>
+
+<div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/jbl headphones.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="JBL Tune 600BTNC Noise Cancelling Headphones"> 
+      <h3>JBL Tune 600BTNC Noise Cancelling Headphones</h3>
+      <p class="w3-opacity">Item Code E004</p>
+       <p>Price: TTD700</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/kids headphones.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Mpow CH6 Kids Headphones"> 
+      <h3>Mpow CH6 Kids Headphones</h3>
+      <p class="w3-opacity">Item Code E005</p>
+      <p>Price: TTD250</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/jbl ear buds.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="JBL Tune T120TWS"> 
+      <h3>JBL Tune T120TWS</h3>
+      <p class="w3-opacity">Item Code E006</p>
+      <p>Price: TTD500</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+       <img src="images/Bluetooth Headset.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Wired Bluetooth Headset"> 
+      <h3>Wired Bluetooth Headset</h3>
+      <p class="w3-opacity">Item Code E007</p>
+      <p>Price: TTD250</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+</p>
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/Headset.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="JBL Live 100 Wired Headset"> 
+      <h3>JBL Live 100 Wired Headset</h3>
+      <p class="w3-opacity">Item Code E008</p>
+       <p>Price: TTD250</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+</p>
+    </div>
+
+  </div>
+
+  </div>
+</div>
+</div>
+
+  
+  
+<div id="id05" class="w3-modal">
+     <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-white w3-center w3-padding-32"> 
+        <span onclick="document.getElementById('id05').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+  <div class="w3-container w3-padding-32" id="accessories">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Chargers</h3>
+    <p>All items can be ordered here by clicking on the WhatsApp link. Click the link to chat with us today!</p>
+
+    <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+       <img src="images/45 w sam charger.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="45W Samsung Type C Charger"> 
+      <h3>45W Samsung Type C Charger</h3>
+      <p class="w3-opacity">Item Code C001</p>
+       <p>Price: TTD200</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+       <img src="images/sam 15w wireless charger.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Samsung 15W Wireless Dual Fast Charger"> 
+      <h3>Samsung 15W Wireless Dual Fast Charger</h3>
+      <p class="w3-opacity">Item Code C002</p>
+      <p>Price: TTD300</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+       <img src="images/wireless charger.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Wireless Charger"> 
+      <h3>Wireless Charger</h3>
+      <p class="w3-opacity">Item Code C003</p>
+      <p>Price: TTD350</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+       <img src="images/belkin 3 in 1 charger.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Belkin 3-in-1 Charger"> 
+      <h3>Belkin 3-in-1 Charger</h3>
+      <p class="w3-opacity">Item Code C004</p>
+      <p>Price: TTD900</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/iphone charger.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="5W iPhone Charger"> 
+      <h3>5W iPhone Charger</h3>
+      <p class="w3-opacity">Item Code C005</p>
+      <p>Price: TTD150</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+    </div>
+
+    
+<div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/apple charger.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Apple Charger"> 
+      <h3>Apple Charger</h3>
+      <p class="w3-opacity">Item Code C006</p>
+      <p>Price: TTD250</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+
+    </div>
+
+<div class="w3-col l3 m6 w3-margin-bottom">
+       <img src="images/Android charger.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Android Fast Charger"> 
+      <h3>Android Fast Charger</h3>
+      <p class="w3-opacity">Item Code C007</p>
+      <p>Price: TTD150</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+
+    </div>
+
+<div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/apple ipad charger.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Apple iPad 2 Mini Charger"> 
+      <h3>Apple iPad Charger</h3>
+      <p class="w3-opacity">Item Code C008</p>
+       <p>Price: TTD200</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+
+    </div>
+
+  </div>
+
+ </div>
+</div>
+</div>
+
+
+<div id="id06" class="w3-modal">
+     <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-white w3-center w3-padding-32"> 
+        <span onclick="document.getElementById('id06').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+  <div class="w3-container w3-padding-32" id="accessories">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Other Items</h3>
+    <p>All items can be ordered here by clicking on the WhatsApp link. Click the link to chat with us today!</p>
+    <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/jackery mini portable charger.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Jackery Mini Portable Charger"> 
+      <h3>Jackery Mini Portable Charger</h3>
+      <p class="w3-opacity">Item Code M001</p>
+      <p>Price: TTD300</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+
+    </div>
+  </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/jbl go 2 bluetooth speaker.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="JBL Go 2 Bluetooth Speaker"> 
+      <h3>JBL Go 2 Bluetooth Speaker</h3>
+      <p class="w3-opacity">Item Code M002</p>
+      <p>Price: TTD400</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+     <img src="images/jbl flip 6.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="JBL Flip 6 Bluetooth Speaker"> 
+     <h3>JBL Flip 6 Bluetooth Speaker</h3>
+      <p class="w3-opacity">Item Code M003</p>
+      <p>Price: TTD400</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/ugreen phone stand.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="UGREEN Adjustable Desktop Phone Stand"> 
+      <h3>UGREEN Adjustable Desktop Phone Stand</h3>
+      <p class="w3-opacity">Item Code M004</p>
+      <p>Price: TTD150</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/car phone holder.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Car Phone Holder"> 
+      <h3>Car Phone Holder</h3>
+      <p class="w3-opacity">Item Code M005</p>
+      <p>Price: TTD100</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+
+    </div>
+    
+     <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/sandisk flash drive.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="SanDisk 32G Flash Drive"> 
+      <h3>SanDisk 32G Flash Drive</h3>
+      <p class="w3-opacity">Item Code M006</p>
+      <p>Price: TTD100</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+
+    </div>
+
+ <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/verbatim flash drive.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Verbatim 128G Clip-It Flash Drive"> 
+      <h3>Verbatim 128G Clip-It Flash Drive</h3>
+      <p class="w3-opacity">Item Code M007</p>
+      <p>Price: TTD250</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+
+    </div>
+
+<div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/sandisk 128G memory card.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="SanDisk 128G Memory Card"> 
+      <h3>SanDisk 128G Memory Card</h3>
+      <p class="w3-opacity">Item Code M008</p>
+       <p>Price: TTD250</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+
+    </div>
+
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/car charger.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="30W Universal 3-Ports Car Fast Charger"> 
+      <h3>30W Universal 3-Ports Car Fast Charger</h3>
+      <p class="w3-opacity">Item Code M009</p>
+      <p>Price: TTD250</p>
+      <a href="https://wa.me/18683637544" class="w3-btn w3-green w3-round-large">Order Here</a>
+
+    </div>
+  
+  </div>
+
+  </div>
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    
+    <a href="https://www.facebook.com/profile.php?id=100064333170895" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i>
+   <a href="https://www.instagram.com/technofix_tt/
+" target="_blank"> <i class="fa fa-instagram w3-hover-opacity"></i>
+   <a href="https://wa.me/18683637544" target="_blank"> <i class="fa fa-whatsapp w3-hover-opacity"></i></a>
+  </div>
+  <p>&copy; 2024 Technofix</p>
+</footer>
