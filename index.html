@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TECHNOFIX</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: "Anton", sans-serif;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Anton", sans-serif;
+  }
+  
+  p.a, ul.b {
+    font-family: "Hanken Grotesk", sans-serif;
+  }
+  
+  ul.c {
+    list-style-type: square;
+  }
+  
+  .w3-row-padding img {
+    margin-bottom: 12px;
+  }
+  
+  .menu {
+    display: none;
+  }
+  
+  .bgimg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("images/Header-background.jpg");
+    min-height: 90%;
+  }
+  
+  .bgimg2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("images/contact us.jpg");
+    min-height: 90%;
+  }
+  
+  /* Responsive Navbar */
+  .w3-top .w3-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .w3-bar-item {
+    padding: 8px 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .w3-top .w3-bar {
+      flex-direction: column;
+    }
+    
+    .w3-bar-item {
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+    }
+    
+    .w3-hide-small {
+      display: none;
+    }
+    
+    .menu {
+      display: block;
+    }
+  }
+
+  /* Mobile-friendly adjustments */
+  @media (max-width: 480px) {
+    .bgimg, .bgimg2 {
+      min-height: 50%;
+      background-size: contain;
+    }
+    
+    .w3-bar-item {
+      font-size: 18px;
+    }
+  }
+</style>
+</head>
+<body class="w3-black">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-white w3-opacity w3-hover-opacity-off w3-right" id="myNavbar">
+    <nav>
+      <a href="index.html" class="w3-bar-item navbar-brand"><img src="images/TechnoFix.png" alt="logo" style="width:40px;"></a>
+      <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+      <a href="about us.html" class="w3-bar-item w3-button">ABOUT US</a>
+      <a href="repairs.html" class="w3-bar-item w3-button">REPAIRS</a>
+      <a href="accessories.html" class="w3-bar-item w3-button">ACCESSORIES</a>
+      <a href="contact us.html" class="w3-bar-item w3-button">CONTACT US</a>
+      <a href="#myMap" class="w3-display-topright w3-bar-item w3-button">SEARCH</a>
+    </nav>
+  </div>
+</div>
+
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container" id="home">
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white w3-hide-small" style="font-size:100px">TECHNOFIX</span>
+    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>thin<br>TECHNOFIX</b></span>
+    <p><a href="repairs.html" class=" w3-button w3-xxlarge w3-yellow">Fix Your Device Today</a></p>
+  </div>
+</header>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    
+    <a href="https://www.facebook.com/profile.php?id=100064333170895" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i>
+   <a href="https://www.instagram.com/technofix_tt/
+" target="_blank"> <i class="fa fa-instagram w3-hover-opacity"></i>
+   <a href="https://wa.me/18683637544" target="_blank"> <i class="fa fa-whatsapp w3-hover-opacity"></i></a>
+  </div>
+  <p>&copy; 2024 Technofix</p>
+</footer>
+ 
+
