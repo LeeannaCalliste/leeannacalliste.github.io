@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TECHNOFIX</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: "Anton", sans-serif;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Anton", sans-serif;
+  }
+  
+  p.a, ul.b {
+    font-family: "Hanken Grotesk", sans-serif;
+  }
+  
+  ul.c {
+    list-style-type: square;
+  }
+  
+  .w3-row-padding img {
+    margin-bottom: 12px;
+  }
+  
+  .menu {
+    display: none;
+  }
+  
+  .bgimg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("images/Header-background.jpg");
+    min-height: 90%;
+  }
+  
+  .bgimg2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("images/contact us.jpg");
+    min-height: 90%;
+  }
+  
+  /* Responsive Navbar */
+  .w3-top .w3-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .w3-bar-item {
+    padding: 8px 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .w3-top .w3-bar {
+      flex-direction: column;
+    }
+    
+    .w3-bar-item {
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+    }
+    
+    .w3-hide-small {
+      display: none;
+    }
+    
+    .menu {
+      display: block;
+    }
+  }
+
+  /* Mobile-friendly adjustments */
+  @media (max-width: 480px) {
+    .bgimg, .bgimg2 {
+      min-height: 50%;
+      background-size: contain;
+    }
+    
+    .w3-bar-item {
+      font-size: 18px;
+    }
+  }
+</style>
+</head>
+<body class="w3-black">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-white w3-opacity w3-hover-opacity-off w3-right" id="myNavbar">
+    <nav>
+      <a href="index.html" class="w3-bar-item navbar-brand"><img src="images/TechnoFix.png" alt="logo" style="width:40px;"></a>
+      <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+      <a href="about us.html" class="w3-bar-item w3-button">ABOUT US</a>
+      <a href="repairs.html" class="w3-bar-item w3-button">REPAIRS</a>
+      <a href="accessories.html" class="w3-bar-item w3-button">ACCESSORIES</a>
+      <a href="contact us.html" class="w3-bar-item w3-button">CONTACT US</a>
+      <a href="#myMap" class="w3-display-topright w3-bar-item w3-button">SEARCH</a>
+    </nav>
+  </div>
+</div>
+
+
+
+<!-- Slideshow -->
+<div class="w3-container w3-padding-64 w3-xlarge" style="background-color:#313b53;" id="repairs">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo w3-border-bottom w3-border-light-grey" style="margin-bottom:64px">REPAIRS</h1>  
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:80px"></div>
+
+ <!-- Slideshow Header -->
+  <div class="w3-container" id="repairs">
+    <div class="w3-display-container mySlides w3-center">
+    <img src="images/flyer.jpg" style="width:20%" onclick="onClick(this)" class="w3-hover-opacity" alt="Technofix Promotional Flyer">
+
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Technofix Services</p>
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides w3-center">
+    <img src="images/payment plan details.jpg" style="width:20%" onclick="onClick(this)" class="w3-hover-opacity" alt="Payment Plan Details">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Payment Plan</p>
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides w3-center">
+    <img src="images/repair process.jpg" style="width:20%" onclick="onClick(this)" class="w3-hover-opacity" alt="Technofix Repair Process">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Repair Process</p>
+      </div>
+    </div>
+    <div class="w3-display-container mySlides w3-center">
+   <img src="images/troubleshooting.jpg" style="width:20%" onclick="onClick(this)" class="w3-hover-opacity" alt="Troubleshooting Services">
+      <div class="w3-display-bottomleft w3-container w3-black">
+        <p>Troubleshooting Services</p>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-white" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/flyer.jpg" style="width:20%;cursor:pointer" onclick="currentDiv(1)" title="Technofix Services">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/payment plan details.jpg" style="width:20%;cursor:pointer" onclick="currentDiv(2)" title="Payment Plan">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/Repair Process.jpg" style="width:20%;cursor:pointer" onclick="currentDiv(3)" title="Repair Process">
+    </div>
+    <div class="w3-col s3">
+      <img class="demo w3-opacity w3-hover-opacity-off" src="images/Troubleshooting.jpg" style="width:20%;cursor:pointer" onclick="currentDiv(4)" title="Troubleshooting Services">
+    </div>
+  </div>
+
+
+
+<script>
+// Slideshow Technofix Images
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>
+
+<!-- Payment Plan -->
+  <div class="w3-container w3-padding-64 w3-xlarge" style="background-color:#313b53;" id="repairs">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">PAYMENT PLAN</h1>  
+    <p class="a w3-center">See below for details on how to apply for one of our payment plans!</p>
+
+     
+      <div class="w3-center w3-container">
+      <video width="470" height="460" controls>
+  <source src="payment plan video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+      <img src="images/payment plan.jpg" style="width:50%" onclick="onClick(this)" class="w3-hover-opacity" alt="Payment Plan"> 
+    </div>
+    <br>
+    <a href="https://forms.gle/48BD88hhtcyxS6Z3A" class="w3-btn w3-yellow w3-round-large w3-center">Click Here For Payment Plan Form</a>
+
+    </div>
+    </div>
+
+<!-- Repairs Container -->
+  <div class="w3-container w3-padding-64 w3-xlarge" style="background-color:#313b53;" id="repairs">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">REPAIR PRICES</h1>  
+<p class ="a w3-center" >Here's a list of some of our prices below.</p>
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/samsung.jpg" alt="samsung" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Samsung</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('id01').style.display='block'">Click Here</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/iphone.jpg" alt="iphone" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>iPhone</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('id02').style.display='block'">Click Here</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/hauwei.jpg" alt="hauwei" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Hauwei</b></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('id03').style.display='block'">Click Here</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prices Modal -->
+<div id="id01" class="w3-modal">
+     <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-white w3-padding-32"> 
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+
+<h1>S SERIES</h1>
+<p class="a">*Please note that this is not a full list of devices and prices are subject to change.</p>
+<br>
+  <div class="w3-row">
+      <div class="a w3-col s4"> 
+  <h2>SCREEN REPLACEMENT</h2>
+
+<ul class="b">
+<ol>
+<li>S7 - $800</li>
+<li>S8 - $1100</li>
+<li>S8+ - $1300</li>
+<li>S9 - $1100</li>
+<li>S9+ - $1300</li>
+<li>S10 - $1400</li>
+<li>S10+ - $1600</li>
+<li>S20 - $1600</li>
+<li>S20+ - $1800</li>
+<li>S20 Ultra - $2000</li>
+<li>S20 FE- $1100</li>
+<li>S21 - $1700</li>
+<li>S21+ - $2000</li>
+<li>S21 Ultra - $2300</li>
+<li>S21 FE - $1200</li>
+<li>S22 - $1800</li>
+<li>S22+ - $2100</li>
+<li>S22 Ultra - $2500</li>
+<li>S23 - $2000</li>
+<li>S23+ - $2300</li>
+<li>S23 Ultra - $2800</li>
+</ol> 
+</div> 
+
+
+      <div class="w3-col s4">
+       <h2>BATTERY REPLACEMENT</h2>
+
+<ul class="b">
+<ol>
+<li>$250</li>
+<li>$310</li>
+<li>$310</li>
+<li>$310</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$410</li>
+<li>$410</li>
+<li>$410</li>
+</ol>  
+
+      </div>
+      <div class="w3-col s4">
+        <h2>CHARGING PORT REPAIR</h2>
+
+<ul class="b">
+<ol>
+<li>$250</li>
+<li>$250</li>
+<li>$290</li>
+<li>$290</li>
+<li>$290</li>
+<li>$250</li>
+<li>$250</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$410</li>
+<li>$410</li>
+<li>$410</li>
+</ol>  
+
+      </div>
+    </div>
+
+<h1>A SERIES</h1>
+   <div class="w3-row">
+      <div class="w3-col s4">
+  <h2>SCREEN REPLACEMENT</h2>
+
+<ul class="b">
+<ol>
+<li>A10 - $500</li>
+<li>A10s - $500</li>
+<li>A11 - $600</li>
+<li>A12- $600</li>
+<li>A12s - $660</li>
+<li>A13 4g - $600</li>
+<li>A13 5g - $600</li>
+<li>A14 4g - $700</li>
+<li>A14 5g- $660</li>
+<li>A20 - $700</li>
+<li>A20 OLED - $600</li>
+<li>A20e - $600</li>
+<li>A20s - $500</li>
+<li>A21 - $660</li>
+<li>A21s - $600</li>
+<li>A22 4g - $880</li>
+<li>A22 5g - $760</li>
+<li>A23 4g - $600</li>
+<li>A23 5g - $660</li>
+<li>A30 OLED- $600</li>
+<li>A30s - $800</li>
+<li>A31 - $800</li>
+<li>A32 - $960</li>
+<li>A33 - $1000</li>
+<li>A34 - $1100</li>
+<li>A40- $600</li>
+<li>A41 - $900</li>
+<li>A42 - $900</li>
+<li>A50 OLED - $660</li>
+<li>A50s - $860</li>
+<li>A51 - $1000</li>
+<li>A52 - $1000</li>
+<li>A52s- $1000</li>
+<li>A53 - $1200</li>
+<li>A54 - $1200</li>
+<li>A60 - $700</li>
+<li>A70 - $900</li>
+<li>A70s - $1000</li>
+<li>A71 - $1060</li>
+<li>A71 OLED- $900</li>
+<li>A72- $1000</li>
+<li>A73 - $1200</li>
+<li>A80 - $1000</li>
+<li>A90 - $1160</li>
+</ol>
+
+</div>
+
+  <div class="w3-col s4">
+<h2>BATTERY REPLACEMENT</h2>
+
+<ul class="b">
+<ol>
+<li>$250</li>
+<li>$250</li>
+<li>$310</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$290</li>
+<li>$290</li>
+<li>$290</li>
+<li>$290</li>
+<li>$310</li>
+<li>$310</li>
+<li>$350</li>
+<li>$350</li>
+<li>$310</li>
+<li>A$310</li>
+<li>$290</li>
+<li>$290</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$290</li>
+<li>$350</li>
+<li>$350</li>
+<li>$290</li>
+<li>$290</li>
+<li>$310</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$310</li>
+<li>$310</li>
+<li>$310</li>
+<li>$350</li>
+<li>$310</li>
+<li>$350</li>
+<li>$410</li>
+<li>$350</li>
+<li>$350</li>
+</ol>
+
+</div>
+
+<div class="w3-col s4">
+<h2>CHARGING PORT REPAIR</h2>
+
+<ul class="b">
+<ol>
+<li>$250</li>
+<li>$250</li>
+<li>$290</li>
+<li>$290</li>
+<li>$310</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$250</li>
+<li>$250</li>
+<li>$250</li>
+<li>$250</li>
+<li>$310</li>
+<li>$310</li>
+<li>$330</li>
+<li>$330</li>
+<li>$310</li>
+<li>$310</li>
+<li>$290</li>
+<li>$290</li>
+<li>$330</li>
+<li>$330</li>
+<li>$310</li>
+<li>$350</li>
+<li>$290</li>
+<li>$350</li>
+<li>$350</li>
+<li>$290</li>
+<li>$290</li>
+<li>$330</li>
+<li>$350</li>
+<li>$350</li>
+<li>$590</li>
+<li>$350</li>
+<li>$290</li>
+<li>$290</li>
+<li>$290</li>
+<li>$330</li>
+<li>$330</li>
+<li>$350</li>
+<li>$410</li>
+<li>$310</li>
+<li>$350</li>
+</ol>
+
+</div>
+</div>
+
+<h1>NOTE SERIES</h1>
+
+<div class="w3-row">
+      <div class="w3-col s4">
+
+<h2>SCREEN REPLACEMENT</h2>
+
+<ul class="b">
+<ol>
+<li>NOTE 9 - $1400</li>
+<li>NOTE 10 - $1400</li>
+<li>NOTE 10+ $1600</li>
+<li>NOTE 20 - $1600</li>
+<li>NOTE 20 Ultra - $2400</li>
+</ol>
+
+</div>
+
+<div class="w3-col s4">
+
+<h2>BATTERY REPLACEMENT</h2>
+
+<ul class="b">
+<ol>
+<li>$290</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+</ol>
+</div>
+
+<div class="w3-col s4">
+
+<h2>CHARGING PORT REPAIR</h2>
+
+<ul class="b">
+<ol>
+<li>$310</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+</ol>
+
+</div>
+</div>
+
+<h1>SAMSUNG TABLET</h1>
+
+<div class="w3-row">
+      <div class="w3-col s6">
+
+<h2>SCREEN REPLACEMENT</h2>
+
+<ul class="b">
+<ol>
+<li>TAB A 9.7 / T550 - $760</li>
+<li>TAB A 10.1 / T580 - $800</li>
+<li>TAB A 10.1 / T585 - $800</li>
+<li>TAB A 10.5 / T590 - $800</li>
+<li>TAB A 10.5 / T595 - $600</li>
+<li>TAB A 10.1 / T510 - $860</li>
+<li>TAB A 10.1 / T515 - $800</li>
+<li>TAB A7 10.4 T500 - $700</li>
+<li>TAB A8 10.5 / X200 - $800</li>
+<li>TAB E 8 / T375 - $700</li>
+<li>TAB E 9.6 / T560 - $700</li>
+<li>TAB E 9.6 / T561 - $700</li>
+<li>TAB S 8.4 / T700  - $900</li>
+<li>TAB S 10.5 / T800 $1000</li>
+<li>TAB S2 8 / T710 - $1300</li>
+<li>TAB S2 9.7 / T810 - $1200</li>
+<li>TAB S2 9.7 / T813 - $1300</li>
+<li>TAB S3 9.7 / T820 - $1400</li>
+<li>TAB S4 10.5 / T830 $1700</li>
+<li>TAB S5E 10.5 / T720 - $1700</li>
+<li>TAB S5E 10.5 / T725 - $1700</li>
+<li>TAB S6 10.5 / T860 - $2100</li>
+<li>TAB S7 11 / T870 - $1000</li>
+<li>TAB PRO 8.4 / T320 - $700</li>
+<li>TAB PRO 10.1 / T520 - $900</li>
+<li>TAB PRO 12.2 / T900 $1200</li>
+<li>TAB PRO 12.2 / P900 - $1200</li>
+</ol>
+
+</div>
+
+<div class="w3-col s6">
+
+<h2>BATTERY REPLACEMENT</h2>
+
+<ul class="b">
+<ol>
+<li>$410</li>
+<li>$390</li>
+<li>$390</li>
+<li>$410</li>
+<li>$410</li>
+<li>$410</li>
+<li>$410</li>
+<li>$410</li>
+<li>$410</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$450</li>
+<li>$450</li>
+<li>$390</li>
+<li>$390</li>
+<li>$390</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$550</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+</ol>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="id02" class="w3-modal">
+     <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-white w3-padding-32"> 
+        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+
+<h1>IPHONE</h1>
+<p class="a">*Please note that this is not a full list of devices and prices are subject to change.</p>
+<br>
+
+<div class="w3-row">
+      <div class="w3-col s4">
+  <h2>SCREEN REPLACEMENT</h2>
+
+<ul class="b">
+<ol>
+<li>7 - $600</li>
+<li>7+ - $600</li>
+<li>8 - $600</li>
+<li>8+- $700</li>
+<li>SE 2020 - $600</li>
+<li>X OEM - $900</li>
+<li>X OLED - $700</li>
+<li>XR - $800</li>
+<li>XS OEM - $900</li>
+<li>XS OLED - $800</li>
+<li>XS MAX - $1200</li>
+<li>XS MAX OEM - $1100</li>
+<li>XS MAX OLED - $900</li>
+<li>11 - $900</li>
+<li>11 PRO - $1500</li>
+<li>11 PRO OLED - $1200</li>
+<li>11 PRO MAX OLED- $1300</li>
+<li>12 MINI - $2300</li>
+<li>12 MINI OLED - $1400</li>
+<li>12 - $1400</li>
+<li>12 OLED - $1200</li>
+<li>12 PRO - $1400</li>
+<li>12 PRO OLED - $1200</li>
+<li>12 PRO MAX - $2300</li>
+<li>12 PRO MAX OLED - $1400</li>
+<li>13 - $1700</li>
+<li>13 OEM - $1400</li>
+<li>13 OLED - $1200</li>
+<li>13 PRO - $2900</li>
+<li>13 PRO MAX - $3100</li>
+<li>14 - $2000</li>
+<li>14+ - $2500</li>
+<li>14 PRO - $3300</li>
+<li>14 PRO MAX - $3700</li>
+</ol>
+</div>
+
+ <div class="w3-col s4">
+  <h2>BATTERY REPLACEMENT</h2>
+
+<ul class="b">
+<ol>
+<li>$250</li>
+<li>$250</li>
+<li>$290</li>
+<li>$290</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$550</li>
+<li>$550</li>
+<li>$550</li>
+<li>$550</li>
+<li>$550</li>
+<li>$550</li>
+<li>$550</li>
+<li>$610</li>
+<li>$650</li>
+</ol>
+</div>
+
+ <div class="w3-col s4">
+  <h2>SCREEN REPLACEMENT</h2>
+
+<ul class="b">
+<ol>
+<li>$250</li>
+<li>$250</li>
+<li>$290</li>
+<li>$290</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$410</li>
+<li>$410</li>
+<li>$410</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$450</li>
+<li>$550</li>
+<li>$550</li>
+<li>$510</li>
+<li>$610</li>
+<li>$650</li>
+<li>$750</li>
+</ol>
+</div>       
+   
+<div class="w3-row">
+  <h2>IPHONE BACK GLASS</h2>
+
+<ul class="b">
+<ol>
+<li>8 / 8+ - $300</li>
+<li> X / XR - $400</li>
+<li> XS / XS MAX - $400</li>
+<li>11 / 11 PRO - $400</li>
+<li>11 PRO MAX - $400</li>
+<li>12/ 12 MINI - $400</li>
+<li>12 PRO / 12 PRO MAX - $400</li>
+<li>12 PRO MAX OLED - $400</li>
+<li>13 - $400</li>
+<li>13 PRO / 13 PRO MAX - $400</li>
+<li>14 / 14+ - $500</li>
+<li>14 PRO / 14 PRO MAX - $500</li>
+</ol>
+</div>  
+</div>
+
+<h1>IPAD</h1>
+
+<div class="w3-row">
+      <div class="w3-col s4">
+  <h2>SCREEN REPLACEMENT</h2>
+
+<ul class="b">
+<ol>
+<li>iPad 9 - $1550</li>
+<li>iPad 10 - $1950</li>
+<li>iPad Air 1 - $1050</li>
+<li>iPad Air 2 - $1050</li>
+<li>iPad Air 3 - $1150</li>
+<li>iPad Air 4- $1250</li>
+<li>iPad Air 5 - $1450</li>
+<li>iPad Mini 1 - $$750</li>
+<li>iPad Mini 2 - $810</li>
+<li>iPad Mini 3 - $810</li>
+<li>iPad Mini 4 - $1050</li>
+<li>iPad Mini 5 - $950</li>
+<li>iPad Mini 6 - $2100</li>
+<li>iPad Pro 9.7 - $1050</li>
+<li>iPad Pro 10.5 - $1050</li>
+<li>iPad Pro 11 -  $1550</li>
+<li>iPad Pro 12.9 (2018) - $2600</li>
+</ol>
+</div>
+
+ <div class="w3-col s4">
+  <h2>BATTERY REPLACEMENT</h2>
+
+<ul class="b">
+<ol>
+<li>$360</li>
+<li>$360</li>
+<li>$400</li>
+<li>$400</li>
+<li>$500</li>
+<li>$500</li>
+<li>$500</li>
+<li>$400</li>
+<li>$400</li>
+<li>$400</li>
+<li>$400</li>
+<li>$460</li>
+<li>$500</li>
+<li>$460</li>
+<li>$460</li>
+<li>$500</li>
+<li>$500</li>
+</ol>
+</div>
+
+ <div class="w3-col s4">
+  <h2>CHARGING PORT REPAIR</h2>
+
+<ul class="b">
+<ol>
+<li>$400</li>
+<li>$400</li>
+<li>$400</li>
+<li>$400</li>
+<li>$400</li>
+<li>$460</li>
+<li>$460</li>
+<li>$360</li>
+<li>$360</li>
+<li>$400</li>
+<li>$400</li>
+<li>$460</li>
+<li>$560</li>
+<li>$500</li>
+<li>$500</li>
+<li>$400</li>
+<li>$440</li>
+</ol>
+</div>          
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="id03" class="w3-modal">
+     <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-white w3-padding-32"> 
+        <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+
+<h1>HAUWEI</h1>
+<p class="a">*Please note that this is not a full list of devices and prices are subject to change.</p>
+<br>
+
+<h1>MATE SERIES</h1>
+
+<div class="w3-row">
+      <div class="w3-col s4">
+        <h2>SCREEN REPLACEMENT</h2>
+
+<ul class="b">
+<ol>
+<li>MATE SE/HONOR 7X - $600</li>
+<li>MATE s - $700</li>
+<li>MATE 7 - $700</li>
+<li>MATE 8- $660</li>
+<li>MATE 9 LITE/HONOR 6X - $560</li>
+<li>MATE 9 - $600</li>
+<li>MATE 9 PRO - $1400</li>
+<li>MATE 10 LITE - $700</li>
+<li>MATE 10 - $1000</li>
+<li>MATE 10 PRO - $1400</li>
+<li>MATE 20 LITE - $660</li>
+<li>MATE 20 - $1100</li>
+<li>MATE 20 PRO - $1200</li>
+<li>MATE 30 - $1500</li>
+<li>MATE 30 PRO - $2000</li>
+</ul>
+      </div>
+      <div class="w3-col s4">
+        <h2>BATTERY REPLACEMENT</h2>
+
+<ul class="b">
+<ol>
+<li>$290</li>
+<li>$310</li>
+<li>$290</li>
+<li>$310</li>
+<li>$290</li>
+<li>$310</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$290</li>
+<li>$350</li>
+<li>$310</li>
+<li>$410</li>
+<li>$410</li>
+</ul>
+      </div>
+      <div class="w3-col s4">
+        <h2>CHARGING PORT REPAIR</h2>
+
+<ul class="b">
+<ol>
+<li>$250</li>
+<li>$250</li>
+<li>$250</li>
+<li>$250</li>
+<li>$250</li>
+<li>$290</li>
+<li>$29</li>
+<li>$290</li>
+<li>$310</li>
+<li>$350</li>
+<li>$310</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+<li>$350</li>
+</ul>
+      </div>
+    </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    
+    <a href="https://www.facebook.com/profile.php?id=100064333170895" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i>
+   <a href="https://www.instagram.com/technofix_tt/
+" target="_blank"> <i class="fa fa-instagram w3-hover-opacity"></i>
+   <a href="https://wa.me/18683637544" target="_blank"> <i class="fa fa-whatsapp w3-hover-opacity"></i></a>
+  </div>
+  <p>&copy; 2024 Technofix</p>
+</footer>

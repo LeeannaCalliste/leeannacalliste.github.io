@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TECHNOFIX</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: "Anton", sans-serif;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Anton", sans-serif;
+  }
+  
+  p.a, ul.b {
+    font-family: "Hanken Grotesk", sans-serif;
+  }
+  
+  ul.c {
+    list-style-type: square;
+  }
+  
+  .w3-row-padding img {
+    margin-bottom: 12px;
+  }
+  
+  .menu {
+    display: none;
+  }
+  
+  .bgimg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("images/Header-background.jpg");
+    min-height: 90%;
+  }
+  
+  .bgimg2 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("images/contact us.jpg");
+    min-height: 90%;
+  }
+  
+  /* Responsive Navbar */
+  .w3-top .w3-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .w3-bar-item {
+    padding: 8px 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .w3-top .w3-bar {
+      flex-direction: column;
+    }
+    
+    .w3-bar-item {
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+    }
+    
+    .w3-hide-small {
+      display: none;
+    }
+    
+    .menu {
+      display: block;
+    }
+  }
+
+  /* Mobile-friendly adjustments */
+  @media (max-width: 480px) {
+    .bgimg, .bgimg2 {
+      min-height: 50%;
+      background-size: contain;
+    }
+    
+    .w3-bar-item {
+      font-size: 18px;
+    }
+  }
+</style>
+</head>
+<body class="w3-black">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-white w3-opacity w3-hover-opacity-off w3-right" id="myNavbar">
+    <nav>
+      <a href="index.html" class="w3-bar-item navbar-brand"><img src="images/TechnoFix.png" alt="logo" style="width:40px;"></a>
+      <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+      <a href="about us.html" class="w3-bar-item w3-button">ABOUT US</a>
+      <a href="repairs.html" class="w3-bar-item w3-button">REPAIRS</a>
+      <a href="accessories.html" class="w3-bar-item w3-button">ACCESSORIES</a>
+      <a href="contact us.html" class="w3-bar-item w3-button">CONTACT US</a>
+      <a href="#myMap" class="w3-display-topright w3-bar-item w3-button">SEARCH</a>
+    </nav>
+  </div>
+</div>
+
+
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-xlarge" style="background-color:#313b53;" id="about us">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo w3-border-bottom w3-border-light-grey" style="margin-bottom:64px">ABOUT US</h1>
+    <p class= "a">Technofix is an online-based business that offers repair services for phones, tablets and laptops, camera installation services as well as the sale of cell phone accessories. 
+    <p class="a"><i>We at Technofix offer customers products and services that enable them to constantly stay connected
+and updated with the use of information technology.</i></p>
+
+<div style="text-align: center;">
+      <img src="images/TechnoFix.png" style="width:30%" class="w3-margin-top w3-margin-bottom" alt="logo">
+    </div>
+  </div>
+</div>
+
+  <!-- Why Choose Us -->
+<div class="w3-container  w3-xlarge" style="background-color:#313b53;" id="Why choose us">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">WHY CHOOSE US?</h1>
+  <p class= "a w3-center w3-xlarge"><i>Experience the essence of convenience, choice and affordability at Technofix where you’re guaranteed to be offered a repair service that best works for you.<i/></p>
+   <div class="w3-row-padding w3-center" style="margin-top:64px">
+     <div class="w3-third"> 
+    <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-xlarge">Convenience</p>
+      <p class= "a">At Technofix, we prioritize your time and ease, offering seamless repair services that fit into your busy schedule. Whether it's quick and free pick-up and drop-offs, efficient turnarounds, or flexible appointment slots, we're here to make your experience as hassle-free as possible.</p>
+    </div>
+    <div class="w3-third">
+      <i class="fa fa-money w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-xlarge">Affordability</p>
+      <p class= "a">Quality repairs shouldn’t break the bank. At Technofix, we offer competitive pricing without compromising on the quality of our services. Experience top-notch repairs at prices that are designed to be within reach for everyone.</p>
+    </div>
+    <div class="w3-third">
+      <i class="fa fa-thumbs-up w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-xlarge">Choice</p>
+      <p class= "a">With Technofix, you have the power to choose the repair service that best suits your needs. From multiple repair options and pricing tiers to an option of utilizing our payment plans, we provide you with the freedom to select what works best for you.</p>
+    </div>
+    
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<!-- Services We Offer -->
+ <div class="w3-row-padding W3-container" style="background-color:#313b53;" id="Services We Offer">
+    <h1 class="w3-center w3-jumbo">SERVICES WE OFFER</h1>
+   <br>
+   <br>
+    <div class="w3-row w3-container w3-third">
+      <img src="images/screen-replacement.jpg" alt="screen-replacement" width= "400" height= "400" class="one">
+      <h1>Screen Replacement</h1>
+      <p class= "a">Cracked or unresponsive screen? Technofix offers fast and reliable screen replacements, restoring your device’s display to like-new condition.</p>
+    </div>
+    <div class=" w3-row w3-container w3-third">
+      <img src="images/battery-replacement.png" alt="battery-replacement" width= "400" height= "400" class="one">
+      <h1>Battery Replacement</h1>
+      <p class= "a">Is your battery draining quickly or simply need to the repaired? Our battery replacement service ensures your device gets back to holding a full charge, so you can stay powered throughout the day.</p>
+    </div>
+    <div class="w3-row w3-container w3-third">
+      <img src="images/charging-port-replacement.jpeg" alt="charging-port-replacement" width= "400" height= "400" class="one">
+      <h1>Charging Port Repair</h1>
+      <p class= "a">Having trouble charging your device? Our charging port repair service will fix connectivity issues and get your device charging smoothly again.</p>
+    </div>
+  </div>
+
+<!-- Our Work Container -->
+<div class="w3-container w3-padding-64 w3-xlarge" style="background-color:#313b53;" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">OUR WORK</h1> 
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+
+    <div class="w3-col m3">
+      <img src="images/sam screen replacement.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Samsung Tablet Screen Replacement">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/sam screen replacement 2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Samsung Screen Replacement">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/sam screen and battery replacement.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Samsung Screen and Battery Replacement">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/ip screen replacement.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="iPhone Screen Replacement">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="images/ip screen replacement 2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="iPhone Screen Replacement">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/iphone screen replacement 3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="iPhone Screen Replacement">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="images/amazon tablet screen replacement.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Amazon Tablet Screen Replacement">
+    </div>
+
+   <div class="w3-col m3">
+      <img src="images/samsung screen replacement 3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Samsung Screen Replacement">
+    </div>
+
+    <div class="w3-col m3">
+      <video width="320" height="240" controls>
+  <source src="samsung tablet screen replacement.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+    </div>
+
+    <div class="w3-col m3">
+      <video width="320" height="240" controls>
+  <source src="samsung battery replacement.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+    </div>
+
+    <div class="w3-col m3">
+      <video width="320" height="240" controls>
+  <source src="hauwei screen replacement.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+    </div>
+
+    <div class="w3-col m3">
+      <video width="320" height="240" controls>
+  <source src="dell computer screen replacement.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+    </div>
+
+    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-white" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+ <!-- Customer Feedback Container -->
+ <div class="w3-container w3-padding-32 " style="background-color:#313b53;" id="about">
+    <h1 class="w3-center w3-jumbo w3-padding-16" style="margin-bottom:64px">CUSTOMER FEEDBACK</h1>  
+   <p class="a w3-center">Take a look at some of our dear customers' awesome reviews.
+    </p>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/smileys.jpg" alt="smileys" style="width:100%">
+      <h3>Miguel John</h3>
+      <p class= "a">"The technician was friendly, knowledgeable, and professional. The screen replacement was done perfectly, and I'm very happy with the results."</p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/smileys.jpg" alt="smileys" style="width:100%">
+      <h3>Kelvis Henry</h3>
+      <p class= "a">"Great communication throughout the repair process. I was kept informed every step of the way."</p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/smileys.jpg" alt="smileys" style="width:100%">
+      <h3>Alana Toby</h3>
+      <p class= "a">"Fast turnaround time and great customer service. My device is like new again. Thank you!"</p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="images/smileys.jpg" alt="smileys" style="width:100%">
+      <h3>Daniel Baptiste</h3>
+      <p class= "a">"Excellent service! My phone's battery was replaced quickly and efficiently, and it works like new. Highly recommend!"</p>
+    </div>
+  </div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    
+    <a href="https://www.facebook.com/profile.php?id=100064333170895" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i>
+   <a href="https://www.instagram.com/technofix_tt/
+" target="_blank"> <i class="fa fa-instagram w3-hover-opacity"></i>
+   <a href="https://wa.me/18683637544" target="_blank"> <i class="fa fa-whatsapp w3-hover-opacity"></i></a>
+  </div>
+  <p>&copy; 2024 Technofix</p>
+</footer>
